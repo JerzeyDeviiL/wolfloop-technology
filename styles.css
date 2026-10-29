@@ -104,12 +104,18 @@ nav a:hover { color: #fff; }
 }
 
 .title {
-  margin: 0 0 clamp(24px, 5vh, 48px);
+  margin: 0 0 calc(clamp(24px, 5vh, 48px) - 0.12em);
   font-weight: 800;
   font-size: clamp(2.25rem, 5.5vw, 3.75rem);
   line-height: 1;
   letter-spacing: -0.02em;
   text-align: center;
+  /* padding keeps the "j" descender inside the clipped gradient */
+  padding-bottom: 0.12em;
+  background: linear-gradient(90deg, var(--gold), var(--orange) 35%, var(--ember) 65%, var(--crimson));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .projects { list-style: none; margin: 0; padding: 0; width: min(640px, 100%); border-top: 1px solid var(--rule); }
