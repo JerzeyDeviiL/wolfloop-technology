@@ -124,6 +124,10 @@ nav a:hover { color: #fff; }
 
 .projects { list-style: none; margin: 0; padding: 0; width: min(640px, 100%); border-top: 1px solid var(--rule); }
 .projects li { border-bottom: 1px solid var(--rule); }
+.projects li { animation: rise 1s var(--ease) both; }
+.projects li:nth-child(1) { animation-delay: 0.2s; }
+.projects li:nth-child(2) { animation-delay: 0.45s; }
+.projects li:nth-child(3) { animation-delay: 0.7s; }
 
 .project {
   position: relative;
